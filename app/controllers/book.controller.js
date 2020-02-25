@@ -35,14 +35,14 @@ ditemukan`
  // Membuat data buku baru
  exports.create = (req, res) => {
   if (!req.body) {
-  res.status(400).send({
-  message: "Content tidak boleh kosong"
-  });
+    res.status(400).send({
+    message: "Content tidak boleh kosong"
+    });
   }
   const book = new Book({
-  title: req.body.title,
-  description: req.body.description,
-  images: req.body.images
+    title: req.body.title,
+    description: req.body.description,
+    images: req.body.images
   });
   Book.create(book, (err, data) => {
   if (err) {
